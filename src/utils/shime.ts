@@ -14,8 +14,8 @@ export function objectClone(obj: any): object {
 
 export function deepClone(params: any): any {
     if (isObject(params)) {
-        return arrayClone(<Array<any>>params)
-    } else if (Array.isArray(params)) {
         return objectClone(<object>params)
+    } else if (Array.isArray(params)) {
+        return arrayClone(<Array<any>>params)
     } else return params
 }
