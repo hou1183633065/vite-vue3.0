@@ -99,23 +99,23 @@ class SingleLinkList {
         console.log('----print---');
         return list
     }
-    free(node: CreateNode) {
+    free(node: any) {
         node = null
     }
     clear() { }
 }
 
-let single = new SingleLinkList()
-single.push(1, 2, 3)
-single.shift(7, 8, 9)
-single.insert(1, 33)
-single.insert(1, 44)
-single.insert(1, 55)
-single.edit(1, 66)
+// let single = new SingleLinkList()
+// single.push(1, 2, 3)
+// single.shift(7, 8, 9)
+// single.insert(1, 33)
+// single.insert(1, 44)
+// single.insert(1, 55)
+// single.edit(1, 66)
 
-// single.remove(2)
-// single.pop()
-// single.unshift()
-// console.log(single.getNode(1));
-console.log(single.print());
-console.log(single);
+// // single.remove(2)
+// // single.pop()
+// // single.unshift()
+// // console.log(single.getNode(1));
+// console.log(single.print());
+// console.log(single);
