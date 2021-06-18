@@ -1,5 +1,8 @@
-class Node {
-    constructor(v) {
+class CreateNode {
+    value: any
+    prev: any
+    next: any
+    constructor(v: any) {
         this.value = v
         this.prev = null
         this.next = null
@@ -7,17 +10,19 @@ class Node {
 }
 
 class SingleLinkList {
+    size: number
+    head: CreateNode
     constructor() {
         this.size = 0
-        this.head = new Node('head')
+        this.head = new CreateNode('head')
     }
     isEmpty() {
         return this.size === 0
     }
-    checkIndex(index) {
+    checkIndex(index: number) {
         if (index && index > this.size) throw Error('index on error')
     }
-    find(index) {
+    find(index: number): CreateNode {
         let header = this.head
         let currentIndex = 0
         while (currentIndex < index) {
@@ -26,36 +31,36 @@ class SingleLinkList {
         }
         return header
     }
-    getNode(index) {
+    getNode(index: number): CreateNode {
         return this.find(index)
     }
-    insert(index, value) {
+    insert(index: number, value: any): void {
         this.checkIndex(index)
         let currentNode = this.find(index)
-        let newNode = new Node(value)
+        let newNode = new CreateNode(value)
         newNode.prev = currentNode
         newNode.next = currentNode.next
         currentNode.next.prev = newNode
         currentNode.next = newNode
         this.size++
     }
-    push(...values) {
+    push(...values: any[]): void {
         let currentNode = this.find(this.size)
         for (let i = 0; i < values.length; i++) {
-            let newNode = new Node(values[i])
+            let newNode = new CreateNode(values[i])
             newNode.prev = currentNode
             currentNode.next = newNode
             currentNode = newNode
             this.size++
         }
     }
-    pop() {
+    pop(): CreateNode {
         return this.remove(this.size)
     }
-    shift(...values) {
+    shift(...values: any[]): void {
         let currentNode = this.find(0)
         for (let i = 0; i < values.length; i++) {
-            let newNode = new Node(values[i])
+            let newNode = new CreateNode(values[i])
             newNode.prev = currentNode
             newNode.next = currentNode.next
             if (currentNode.next) currentNode.next.prev = newNode
@@ -64,10 +69,10 @@ class SingleLinkList {
             this.size++
         }
     }
-    unshift() {
+    unshift(): CreateNode {
         return this.remove(1)
     }
-    remove(index) {
+    remove(index: number): CreateNode {
         this.checkIndex(index)
         let currentNode = this.find(index)
         let prev = currentNode.prev
@@ -75,14 +80,14 @@ class SingleLinkList {
         if (prev) prev.next = next
         if (next) next.prev = prev
         this.size--
-        free(currentNode)
+        this.free(currentNode)
         return currentNode
     }
-    edit(index, value) {
+    edit(index: number, value: number): void {
         let currentNode = this.find(index)
         currentNode.value = value
     }
-    print() {
+    print(): Array<CreateNode> {
         let list = []
         let header = this.head
         console.log('----print---');
@@ -94,7 +99,7 @@ class SingleLinkList {
         console.log('----print---');
         return list
     }
-    free(node) {
+    free(node: CreateNode) {
         node = null
     }
     clear() { }
