@@ -3,7 +3,6 @@ import router from './router'
 import App from './App.vue'
 // import '/@/assets/styles/App.scss'
 import './utils/.example'
-import './utils/CreateLinkList'
 import MyPromise from './utils/MyPromise'
 // console.log(import.meta.env)
 let newPromise = new MyPromise((resolve, reject) => {

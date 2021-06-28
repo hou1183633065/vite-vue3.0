@@ -1,4 +1,5 @@
 const path = require('path')
+const MonacoWebpackPlugin = require('monaco-editor-webpack-plugin');
 export default {
     hostname: '127.0.0.1',
     port: 8080,
@@ -14,4 +15,7 @@ export default {
         '/utils/': path.resolve(__dirname, './src/utils'),
         '/components/': path.resolve(__dirname, './src/components'),
     },
+    plugins: [
+        new MonacoWebpackPlugin()
+    ]
 }

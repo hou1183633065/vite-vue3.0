@@ -112,3 +112,76 @@ export function reverseNumber(x: number): number {
 
     return flag * Number(list.reverse().join(''))
 }
+
+/**
+ * 有序二维数组（矩阵）中查找是否存在某个特定值
+ * @param matrix 有序二维数组（矩阵），从上到下、从左到右排序
+ * @param target 
+ * @returns 
+ */
+export function findNumberIn2DArray(matrix: number[][], target: number) {
+    let y = matrix.length - 1
+
+    while (y >= 0) {
+        if (!((matrix[y][0] > target) || (matrix[y][matrix[y].length - 1] < target))) {
+            for (let x = 0; x < matrix.length; x++) {
+                console.count('findNumberIn2DArray');
+                if (matrix[y][x] === target) {
+                    return true
+                }
+            }
+        } else {
+            console.count('findNumberIn2DArray');
+        }
+        y--
+    }
+
+    return false
+
+}
+
+/**
+ * 二分查找是否存在某个值
+ * @param list 有序数组
+ * @param target 
+ * @return Boolean
+ */
+export function binarySearch(list: number[], target: number): boolean {
+    let low = 0, high = list.length - 1, mid
+    while (low <= high) {
+        mid = Math.floor((low + high) / 2)
+        console.count('binarySearchRunning');
+        if (list[mid] === target) return true
+        if (list[mid] < target) low = mid + 1
+        if (list[mid] > target) high = mid - 1
+    }
+    return false
+}
+
+export function setTimeoutRun(list: any[], delay = 100) {
+    let index = 0
+    function runIndex() {
+        setTimeout(() => {
+            console.log(list[index]);
+            if (index < list.length - 1) {
+                index++
+                runIndex()
+            }
+        }, delay);
+    }
+    runIndex()
+}
+
+
+
+export function longestCommonPrefix(list: string[]) {
+    let strSum = ''
+    let first = list[0]
+    for (let i = 0; i < first.length; i++) {
+        for (let j = 1; j < list.length; j++) {
+            if (first[i] !== list[j][i]) return strSum
+        }
+        strSum += first[i]
+    }
+    return strSum
+}

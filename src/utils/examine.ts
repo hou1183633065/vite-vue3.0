@@ -22,7 +22,7 @@ export const toString = (v: any) => (
 export const isNull = (v: any): boolean => v === null
 
 /**
- * 是否为null
+ * 是否为null/undefined
  * @param v 
  * @return Boolean
  */

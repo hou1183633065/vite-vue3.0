@@ -14,6 +14,11 @@ const routes = [
         alias: '/About',
         component: () => import('/views/about.vue')
     },
+    {
+        path: '/edit',
+        alias: '/Edit',
+        component: () => import('/views/edit.vue')
+    },
 ]
 const router = createRouter({
     history: createWebHashHistory(import.meta.env.BASE_URL),

@@ -1,0 +1,97 @@
+{
+    "表头数据格式": [
+        {
+            "title": "姓名",
+            "type": "byte",
+            "key": "name"
+        },
+        {
+            "title": "性别",
+            "type": "int",
+            "key": "sex"
+        },
+        {
+            "title": "年龄",
+            "type": "int",
+            "key": "age"
+        }
+    ],
+    "表格数据格式": [
+        {
+            "name": "张三",
+            "sex": 1,
+            "age": 18
+        },
+        {
+            "name": "李四",
+            "sex": 0,
+            "age": 18
+        },
+        {
+            "name": "王五",
+            "sex": 1,
+            "age": 18
+        }
+    ],
+    "树形结构1": [
+        {
+            "label": "mysql",
+            "type": "database",
+            "children": [
+                {
+                    "label": "crm",
+                    "type": "project",
+                    "children": [
+                        {
+                            "label": "表1",
+                            "type": "table",
+                            "children": [
+                                {
+                                    "label": "name",
+                                    "type": "dict"
+                                },
+                                {
+                                    "label": "sex",
+                                    "type": "dict"
+                                },
+                                {
+                                    "label": "age",
+                                    "type": "dict"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "树形结构2": [
+        {
+            "label": "mysql",
+            "type": "database",
+            "children": [
+                {
+                    "label": "crm",
+                    "type": "project",
+                    "children": [
+                        {
+                            "label": "表1",
+                            "type": "table",
+                            "wordnames": [
+                                {
+                                    "label1": "name"
+                                },
+                                {
+                                    "label1": "sex"
+                                },
+                                {
+                                    "label1": "age"
+                                }
+                            ]
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}
