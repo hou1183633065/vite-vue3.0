@@ -93,5 +93,39 @@
                 }
             ]
         }
+    ],
+    "columns": [
+        {
+            "desc": "姓名",
+            "type": "byte",
+            "key": "name"
+        },
+        {
+            "desc": "性别",
+            "type": "int",
+            "key": "sex"
+        },
+        {
+            "desc": "年龄",
+            "type": "int",
+            "key": "age"
+        }
+    ],
+    "tableData": [
+        {
+            "name": "张三",
+            "sex": 1,
+            "age": 18
+        },
+        {
+            "name": "李四",
+            "sex": 0,
+            "age": 18
+        },
+        {
+            "name": "王五",
+            "sex": 1,
+            "age": 18
+        }
     ]
 }

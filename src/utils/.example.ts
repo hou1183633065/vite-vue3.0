@@ -11,6 +11,8 @@ import {
     longestCommonPrefix
 } from './algorithm';
 import './CreateLinkList'
+import './mathematics'
+import './sort'
 import './heap'
 // import './stack'
 // import './queue'
@@ -135,7 +137,7 @@ function init() {
 // init()
 
 
-let listReq = Array.apply(null, { length: 20 }).map((item, index) => {
+let listReq = Array.apply(null, { length: 20 } as any).map((item, index) => {
     return {
         reqIndex: index,
         callback: () => {

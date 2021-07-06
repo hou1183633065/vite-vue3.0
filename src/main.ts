@@ -1,16 +1,17 @@
-import { createApp } from 'vue'
+import { createApp } from 'vue';
+
 import router from './router'
 import App from './App.vue'
-// import '/@/assets/styles/App.scss'
+// import './assets/styles/App.scss'
 import './utils/.example'
-import MyPromise from './utils/MyPromise'
+// import MyPromise from './utils/MyPromise'
 // console.log(import.meta.env)
-let newPromise = new MyPromise((resolve, reject) => {
-    setTimeout(() => {
-        resolve({ code: 200 })
-        // reject({ code: 500 })
-    }, 1000);
-})
+// let newPromise = new MyPromise((resolve, reject) => {
+//     setTimeout(() => {
+//         resolve({ code: 200 })
+//         // reject({ code: 500 })
+//     }, 1000);
+// })
 // newPromise.then((result: any) => {
 //     console.log('-->', result);
 //     return new MyPromise(resolve => {
