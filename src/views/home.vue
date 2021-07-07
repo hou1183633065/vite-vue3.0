@@ -3,9 +3,11 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from 'vue'
+import { defineComponent, ref, Ref } from 'vue'
 
 export default defineComponent({
-  setup() {},
+  setup() {
+    const nodeRef:Ref = ref(null)
+  },
 })
 </script>

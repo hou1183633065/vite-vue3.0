@@ -143,7 +143,7 @@ export function bucketSort(list: number[]) {
     }
     const bucketSize = 10
     const bucketCount = Math.floor((max - min) / bucketSize) + 1
-    console.log(min, max, bucketCount);
+    // console.log(min, max, bucketCount);
 
     let buckets = new Array(bucketCount)
 
@@ -219,17 +219,17 @@ export function shellSort(list: number[], isDescending?: boolean) {
 export function mergeSort(list: number[], isDescending?: boolean) {
 
 }
-console.log(sortArr);
+// console.log(sortArr);
 
 
 
-console.log(radixSort(sortArr));
+// console.log(radixSort(sortArr));
 
 
 export function bubbleSort2(list: number[], isDescending?: boolean) {
     let x1 = 0, x2 = 1
     while (x1 < list.length && x2 < list.length) {
-        console.log(list[x1], list[x2]);
+        // console.log(list[x1], list[x2]);
 
         x1++
         x2++

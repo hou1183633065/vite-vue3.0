@@ -34,7 +34,7 @@ export function gradeAn(a1: number, d: number, n: number): number {
     return a1 + (n - 1) * d
 }
 // 1, 3, 5, 7
-console.log(gradeAn(1, 2, 3));
+// console.log(gradeAn(1, 2, 3));
 
 /**
  * 等差数列求和
